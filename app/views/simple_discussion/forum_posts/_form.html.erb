@@ -26,3 +26,18 @@
   <%#= link_to "Parsed with Markdown", "https://guides.github.com/features/mastering-markdown/", target: "_blank" %>
 
 <% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find the text area by its class
+    var textArea = document.querySelector('.simplemde');
+
+    // Initialize SimpleMDE on the text area
+    const editMde = new SimpleMDE({
+      element: textArea,
+      initialValue: '## Stuff.... ',
+      hideIcons: ['guide', 'fullscreen', 'side-by-side']
+      // You can add more options here as needed
+    });
+  });
+</script>

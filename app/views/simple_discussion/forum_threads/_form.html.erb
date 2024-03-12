@@ -28,7 +28,7 @@
     <%= f.fields_for :forum_posts do |p| %>
       <div class="form-group">
         <%= p.label :body, t('what_help_needed') %>
-        <%= p.text_area :body, id: "editor" , rows: 10, class: "form-control simplemde", data: { behavior: "comment-body" } %>
+        <%= p.text_area :body , rows: 10, class: "form-control simplemde", data: { behavior: "comment-body" },id:"editor" %>
       </div>
     <% end %>
   <% end %>
@@ -42,3 +42,18 @@
   </div>
 
 <% end %>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find the text area by its class
+    var textArea = document.querySelector('.simplemde');
+
+    // Initialize SimpleMDE on the text area
+    const editMde = new SimpleMDE({
+      element: textArea,
+      initialValue: '## Stuff.... ',
+      hideIcons: ['guide', 'fullscreen', 'side-by-side']
+      // You can add more options here as needed
+    });
+  });
+</script>
