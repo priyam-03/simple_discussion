@@ -1,6 +1,9 @@
-<%= javascript_include_tag "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js" %>
-<%= stylesheet_link_tag "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-document.addEventListener("DOMContentLoaded", function() {
-  var simplemde = new SimpleMDE({ element: document.querySelector('.simplemde') });
+const editMde = new SimpleMDE({
+  element: document.getElementById('editor'),
+  initialValue: t('add_a_comment'),
+ 
 });
