@@ -1,0 +1,6 @@
+<%= javascript_include_tag "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js" %>
+<%= stylesheet_link_tag "https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" %>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var simplemde = new SimpleMDE({ element: document.querySelector('.simplemde') });
+});
